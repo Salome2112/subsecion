@@ -1,0 +1,17 @@
+#Identificar claramente las sentencias que extraiga informacion valiosa para el contexto de la base de datos
+##En consulta obtiene el nombre de la conferencia el codigo de registro y el nombre del miembro de la tabla event pero solo para los registros donde
+el nombre de la conferencia es Conferencia ABC
+*SELECT 
+    nombre_conferencia, 
+    codigo_registro, 
+    nombre_miembro 
+FROM event
+WHERE nombre_conferencia = 'Conferencia ABC';*
+![imagen]("C:\Users\Usuario\Downloads\Captura de pantalla 2024-07-01 195255.png")
+###El código SQL agrupa los registros por el nombre de la conferencia y cuenta el número de registros para cada conferencia
+ *SELECT nombre_conferencia, COUNT(*) AS total_registros 
+  FROM event 
+  GROUP BY nombre_conferencia;*
+![imagen]("C:\Users\Usuario\Downloads\Captura de pantalla 2024-07-01 201949.png")    
+
+
